@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Menu_About" xml:space="preserve">
+    <value>關於</value>
+  </data>
+  <data name="Menu_Language" xml:space="preserve">
+    <value>語言</value>
+  </data>
+  <data name="Menu_ExtensionLink" xml:space="preserve">
+    <value>擴展鏈接</value>
+  </data>
+  <data name="Lang_English" xml:space="preserve">
+    <value>英語</value>
+  </data>
+  <data name="Lang_Simplified" xml:space="preserve">
+    <value>簡體中文</value>
+  </data>
+  <data name="Lang_Traditional" xml:space="preserve">
+    <value>繁體中文</value>
+  </data>
+  <data name="Lang_About2" xml:space="preserve">
+    <value>關於</value>
+  </data>
+  <data name="Msg_ProjectResult" xml:space="preserve">
+    <value>當前共 {0} 個文件，新增 {1} 個文件，跳過 {2} 個重複文件。</value>
+  </data>
+  <data name="OpenFileButton" xml:space="preserve">
+    <value>瀏覽</value>
+  </data>
+  <data name="Openprojectsjsontxt" xml:space="preserve">
+    <value>打開 projects.json 文件</value>
+  </data>
+  <data name="TagsButtonText" xml:space="preserve">
+    <value>標簽列表</value>
+  </data>
+  <data name="OutJSONButtonText" xml:space="preserve">
+    <value>生成 JSON 文件</value>
+  </data>
+  <data name="Label_ConfigFile" xml:space="preserve">
+    <value>配置文件</value>
+  </data>
+  <data name="Label_TagsText" xml:space="preserve">
+    <value>統壹標簽</value>
+  </data>
+  <data name="Multilabeleg" xml:space="preserve">
+    <value>多標簽例：Note1,Note2,Note3</value>
+  </data>
+  <data name="AddFileButtonText" xml:space="preserve">
+    <value>添加文件</value>
+  </data>
+  <data name="InputFileButtonText" xml:space="preserve">
+    <value>手動輸入路徑</value>
+  </data>
+  <data name="DelFileButtonText" xml:space="preserve">
+    <value>刪除選中</value>
+  </data>
+  <data name="CleanAllButtonText" xml:space="preserve">
+    <value>清空全部</value>
+  </data>
+  <data name="Msg_Noconfigfileselected" xml:space="preserve">
+    <value>沒有選擇配置文件路徑。</value>
+  </data>
+  <data name="Msg_listempty" xml:space="preserve">
+    <value>列表為空，請添加文件。</value>
+  </data>
+  <data name="TagsSelectWindow" xml:space="preserve">
+    <value>標簽選擇窗口</value>
+  </data>
+  <data name="Label_SelectTagslistText" xml:space="preserve">
+    <value>請選擇標簽（可多選）</value>
+  </data>
+  <data name="OKbutton" xml:space="preserve">
+    <value>確定</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="InputfilepathWindow" xml:space="preserve">
+    <value>手動輸入文件路徑窗口</value>
+  </data>
+  <data name="InputFileListTip" xml:space="preserve">
+    <value>請輸入完整路徑，壹行壹個，也可以拖放文件到這裏。</value>
+  </data>
+  <data name="InputFileListText" xml:space="preserve">
+    <value>添加到列表</value>
+  </data>
+  <data name="AboutWinodw" xml:space="preserve">
+    <value>關於</value>
+  </data>
+  <data name="Label_AboutText" xml:space="preserve">
+    <value>關於</value>
+  </data>
+  <data name="Label_AboutTextTips" xml:space="preserve">
+    <value>這是用於給VScode擴展插件的 Project Manager 批量管理與生成 projects.json 配置文件，實現自動添加文件標簽和路徑功能。</value>
+  </data>
+  <data name="Title_Selectprojectsfile" xml:space="preserve">
+    <value>選擇 projects.json 文件</value>
+  </data>
+  <data name="Title_Selectfile" xml:space="preserve">
+    <value>選擇文件</value>
+  </data>
+  <data name="Msg_SelectvalidJSONfile" xml:space="preserve">
+    <value>請先選擇有效的 JSON 文件。</value>
+  </data>
+  <data name="Msg_JSONfileparsingfailed" xml:space="preserve">
+    <value>JSON 文件解析失敗。</value>
+  </data>
+  <data name="Msg_Therenotags" xml:space="preserve">
+    <value>JSON 中沒有找到任何標簽。</value>
+  </data>
+  <data name="Title_ChooseSaveJSONfile" xml:space="preserve">
+    <value>選擇保存 JSON 文件</value>
+  </data>
+  <data name="CheckBox_SavePathText" xml:space="preserve">
+    <value>保存路徑</value>
+  </data>
+  <data name="Msg_NoInputContent" xml:space="preserve">
+    <value>沒有輸入內容。</value>
+  </data>
+  <data name="Menu_Theme" xml:space="preserve">
+    <value>主題</value>
+  </data>
+  <data name="Menu_ThemeLight" xml:space="preserve">
+    <value>日間模式</value>
+  </data>
+  <data name="Menu_ThemeDark" xml:space="preserve">
+    <value>夜間模式</value>
+  </data>
+</root>

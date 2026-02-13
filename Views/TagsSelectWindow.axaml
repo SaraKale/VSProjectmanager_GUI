@@ -1,0 +1,42 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="350" d:DesignHeight="400"
+        x:Class="VSProjectManager_GUI.TagsSelectWindow"
+        xmlns:res="clr-namespace:VSProjectManager_GUI.Resources"
+        Width="350" Height="400"
+        Title="{x:Static res:Resources.TagsSelectWindow}">
+
+    <StackPanel Margin="15" Spacing="10">
+        <!-- 请选择标签（可多选） -->
+        <TextBlock Text="{x:Static res:Resources.Label_SelectTagslistText}"/>
+        <!-- 滚动条 -->
+        <ScrollViewer Height="300"
+                      VerticalScrollBarVisibility="Auto">
+            <!-- 列表内容 -->
+            <ListBox Name="TagsListBox"
+                     SelectionMode="Multiple,Toggle"/>
+        </ScrollViewer>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Spacing="20">
+            <!-- 确定按钮 -->
+            <Button Content="{x:Static res:Resources.OKbutton}"
+                    Width="80"
+                    HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Center"
+                    Click="ConfirmClick"/>
+            <!-- 取消按钮 -->
+            <Button Content="{x:Static res:Resources.CancelButton}"
+                    Width="80"
+                    HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Center"
+                    Click="CancelClick"/>
+
+        </StackPanel>
+
+    </StackPanel>
+
+</Window>

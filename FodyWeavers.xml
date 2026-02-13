@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Weavers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="FodyWeavers.xsd">
+  <Costura>
+    <IncludeAssemblies>
+	 Avalonia
+	 System.Text.Json
+	Avalonia.Desktop
+	Avalonia.Diagnostics
+	Avalonia.Fonts.Inter
+	Avalonia.Themes.Fluent
+	CommunityToolkit.Mvvm
+    </IncludeAssemblies>
+	<IncludeFiles>
+      *.xml
+    </IncludeFiles>
+  </Costura>
+</Weavers>

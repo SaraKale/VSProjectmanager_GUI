@@ -1,0 +1,25 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="350" d:DesignHeight="300"
+        Width="350" Height="300"
+        x:Class="VSProjectManager_GUI.About"
+        xmlns:res="clr-namespace:VSProjectManager_GUI.Resources"
+        Title="{x:Static res:Resources.AboutWinodw}">
+
+        <StackPanel Margin="15" Spacing="10">
+        <!-- 关于 -->
+        <TextBlock Margin="0 5" FontSize="22" FontWeight="Bold" Text="{x:Static res:Resources.Label_AboutText}" /> 
+        <!-- 这是用于给VScode扩展插件的 Project Manager 生成 projects.json 文件，实现自动添加文件标签和路径功能。 -->
+        <TextBlock Margin="0 5" FontSize="18" TextWrapping="Wrap" Text="{x:Static res:Resources.Label_AboutTextTips}" />
+        
+        <WrapPanel ItemSpacing="10" Margin="0,20,0,0">
+       <!--<TextBlock Margin="0" FontSize="14">SourceCode</TextBlock> -->
+       <!-- <TextBlock Margin="0" FontSize="14">Github</TextBlock> -->
+
+        </WrapPanel>
+        <TextBlock Margin="0" FontSize="14">by:SaraKale</TextBlock> 
+    </StackPanel>
+
+</Window>

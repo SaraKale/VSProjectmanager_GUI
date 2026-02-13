@@ -1,0 +1,128 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:VSProjectManager_GUI.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="650" d:DesignHeight="550"
+        xmlns:p="using:AvaloniaI18NTest.Properties"
+        x:Class="VSProjectManager_GUI.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        xmlns:res="clr-namespace:VSProjectManager_GUI.Resources"
+        Width="650" Height="550"
+        Icon="/Assets/project-manager-Icons.ico"
+        Title="VSProjectManager_GUI">
+
+    <Design.DataContext>
+        <!-- 这仅在 IDE 中为预览器设置 DataContext,
+            要为运行时设置实际的 DataContext，请在代码中设置 DataContext 属性 (参见 App.axaml.cs)。-->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+<DockPanel>
+
+        <!-- 菜单 -->
+        <Menu DockPanel.Dock="Top">
+          <MenuItem Header="{x:Static res:Resources.Menu_Language}"> <!-- 语言 -->
+            <MenuItem Header="{x:Static res:Resources.Lang_English}" Click="English_Click"/> <!-- 英语 -->
+            <MenuItem Header="{x:Static res:Resources.Lang_Simplified}"  Click="Simplified_Click"/> <!-- 简体中文 -->
+            <MenuItem Header="{x:Static res:Resources.Lang_Traditional}" Click="Traditional_Click"/> <!-- 繁体中文 -->
+          </MenuItem>
+          <MenuItem Header="{x:Static res:Resources.Menu_About}"> <!-- 关于 -->
+            <MenuItem Header="{x:Static res:Resources.Menu_ExtensionLink}" Click="ExpansionLinkClick"/> <!-- 扩展链接 -->
+            <MenuItem Header="{x:Static res:Resources.Menu_About}" Click="AboutMenuClick"/> <!-- 关于 -->
+          </MenuItem>
+           <MenuItem Header="{x:Static res:Resources.Menu_Theme}"> <!-- 主题 -->
+            <MenuItem Header="{x:Static res:Resources.Menu_ThemeLight}" Click="ThemeLightClick"/> <!-- 日间模式 -->
+            <MenuItem Header="{x:Static res:Resources.Menu_ThemeDark}" Click="ThemeDarkClick"/> <!-- 夜间模式 -->
+          </MenuItem>
+        </Menu>
+
+        <!-- 主内容区域 -->
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical" Margin="16" Spacing="10" HorizontalAlignment="Stretch">
+
+                <!-- 导入配置文件 -->
+                <WrapPanel ItemSpacing="10">
+                    <!-- 配置文件文本 -->                    
+                     <TextBlock Margin="0,0,20,0" VerticalAlignment="Center" Text="{x:Static res:Resources.Label_ConfigFile}" />
+                     <!-- 配置文件路径框 --> 
+                    <TextBox Watermark="{x:Static res:Resources.Openprojectsjsontxt}" Width="400" Height="30" Margin="0,0,5,0" Name="OpenFilePathText"/>
+                     <!-- 浏览按钮 --> 
+                    <Button Name="OpenFileButton" Content="{x:Static res:Resources.OpenFileButton}" Width="100" Height="30" Margin="0,0,0,0"
+                            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                            Click="OpenFileButtonClik" />
+                </WrapPanel>
+
+                <!-- 统一标签 -->
+                <WrapPanel ItemSpacing="10">
+                    <!-- 统一标签文本 --> 
+                      <TextBlock Margin="0,0,20,0" VerticalAlignment="Center" Text="{x:Static res:Resources.Label_TagsText}" />
+                    <!-- 标签文本框 --> 
+                    <TextBox  Watermark="Note1,Note2,Note3" Width="300" Height="30" Margin="0,0,5,0"  Name="TagsInputText"/>
+                    <!-- 标签浏览按钮 --> 
+                    <Button Name="TagsListText" Content="{x:Static res:Resources.TagsButtonText}" Width="120" Height="30" Margin="0,0,0,0"
+                            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                            Click="TagsListClick" />
+                </WrapPanel>
+                 <!-- 多标签例子 --> 
+                <WrapPanel ItemSpacing="10">
+                    <TextBlock Margin="0,0,0,0" VerticalAlignment="Center" Height="30" Padding="90,2,0,0" Text="{x:Static res:Resources.Multilabeleg}" />
+                </WrapPanel>
+    
+                <!-- 文件列表框 -->
+               <WrapPanel ItemSpacing="10">
+                    <ScrollViewer Width="600"
+                                  Height="200"
+                                  HorizontalScrollBarVisibility="Auto"
+                                  VerticalScrollBarVisibility="Auto">
+                        <ListBox Name="FileListBox"
+                                 SelectionMode="Multiple,Toggle"/>
+                    </ScrollViewer>
+                </WrapPanel>
+
+                <!-- 文件按钮组 -->
+                <WrapPanel ItemSpacing="10">
+                     <!-- 添加文件 --> 
+                    <Button Content="{x:Static res:Resources.AddFileButtonText}" Width="100" Height="30" Margin="60,0,0,0"
+                            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                            Click="AddFileButtonCilck" />
+                     <!-- 手动输入路径 --> 
+                    <Button Content="{x:Static res:Resources.InputFileButtonText}" Width="120" Height="30" Margin="0,0,0,0"
+                            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                            Click="InputFileButtonCilck" />
+                     <!-- 删除选中 --> 
+                    <Button Content="{x:Static res:Resources.DelFileButtonText}" Width="100" Height="30" Margin="0,0,0,0"
+                            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                            Click="DelFileButtonCilck" />
+                     <!-- 清空全部 --> 
+                    <Button Content="{x:Static res:Resources.CleanAllButtonText}" Width="100" Height="30" Margin="0,0,0,0"
+                            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                            Click="CleanAllfileButton" />
+                </WrapPanel>
+
+                <!-- 自定义保存路径 -->
+                <WrapPanel ItemSpacing="10" Margin="0,10,0,0">
+                    <!-- 保存路径文本 -->  
+                     <CheckBox Name="SaveFilePathCheckBox" Margin="0,0,20,0"
+                         Content="{x:Static res:Resources.CheckBox_SavePathText}" />
+                     <!-- 保存路径路径框 --> 
+                    <TextBox Watermark="" Width="370" Height="30" Margin="0,0,5,0" Name="SaveFilePathText"/>
+                     <!-- 保存文件浏览按钮 --> 
+                    <Button Name="SaveFilePathButton" Content="{x:Static res:Resources.OpenFileButton}" Width="100" Height="30" Margin="0,0,0,0"
+                            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                            Click="SaveFilePathButtonClick" />
+                </WrapPanel>
+
+                 <!-- 最终生成JSON文件 -->
+                <WrapPanel ItemSpacing="10">
+                     <!-- 添加文件 --> 
+                    <Button Name="JSONOuputButton" Content="{x:Static res:Resources.OutJSONButtonText}" Width="170" Height="35" Margin="217,10,0,0"
+                            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                            Click="OutputJSONClick" />
+                </WrapPanel>
+
+            </StackPanel>
+        </ScrollViewer>
+
+    </DockPanel>
+</Window>
