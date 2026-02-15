@@ -1,4 +1,4 @@
-<h1 align="center">VSProjectmanager_GUI</h1>
+<h1 align="center">VSProjectManager_GUI</h1>
 
 <p align="center">
   <img src="Assets/screen_en.jpg" align="middle" width = "700"/>
@@ -36,13 +36,17 @@ Project Manager擴展安裝：https://marketplace.visualstudio.com/items?itemNam
 |  Github  | [releases](https://github.com/SaraKale/VSProjectmanager_GUI/releases) |
 |  Gitee   | [releases](https://gitee.com/sarakale/VSProjectmanager_GUI/releases)  |
 
+Windows: [Download](https://github.com/SaraKale/VSProjectmanager_GUI/releases/download/v1.0.0/VSProjectManager_GUI_v1.0.0_win-x64.zip)  
+Mac: [osx-x64](https://github.com/SaraKale/VSProjectmanager_GUI/releases/download/v1.0.0/VSProjectManager_GUI_v1.0.0_osx-x64.tar.gz) or [osx-arm64](https://github.com/SaraKale/VSProjectmanager_GUI/releases/download/v1.0.0/VSProjectManager_GUI_v1.0.0_osx-arm64.tar.gz)  
+Linux: [Download](https://github.com/SaraKale/VSProjectmanager_GUI/releases/download/v1.0.0/VSProjectManager_GUI_v1.0.0_linux-arm64.tar.gz)
+
 Windows系統請選擇 `VSProjectManager_GUI_v1.0.0_win-x64.zip`   
 macOS系統請選擇 `VSProjectManager_GUI_v1.0.0_osx-x64.tar.gz`  或 `VSProjectManager_GUI_v1.0.0_osx-arm64.tar.gz`  
 Linux系統請選擇 `VSProjectManager_GUI_v1.0.0_linux-arm64.tar.gz` 
 
 ## 運行環境
 
-需要安裝 .NET 6.0 運行環境，請到這裡下載：https://dotnet.microsoft.com/zh-tw/download/dotnet/6.0
+需要安裝 .NET 6.0 運行環境，請到這裡下載：https://dotnet.microsoft.com/zh-tw/download/dotnet/6.0  
 選擇 「桌面運行時」（Runtime）而非 「SDK」，對應系統版本安裝即可。
 
 支持系統版本：  

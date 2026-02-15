@@ -1,4 +1,4 @@
-<h1 align="center">VSProjectmanager_GUI</h1>
+<h1 align="center">VSProjectManager_GUI</h1>
 
 <p align="center">
   <img src="Assets/screen_en.jpg" align="middle" width = "700"/>
@@ -36,13 +36,17 @@ Please select any of the nodes below to download.
 |  Github  | [releases](https://github.com/SaraKale/VSProjectmanager_GUI/releases) |
 |  Gitee   | [releases](https://gitee.com/sarakale/VSProjectmanager_GUI/releases)  |
 
+Windows: [Download](https://github.com/SaraKale/VSProjectmanager_GUI/releases/download/v1.0.0/VSProjectManager_GUI_v1.0.0_win-x64.zip)  
+Mac: [osx-x64](https://github.com/SaraKale/VSProjectmanager_GUI/releases/download/v1.0.0/VSProjectManager_GUI_v1.0.0_osx-x64.tar.gz) or [osx-arm64](https://github.com/SaraKale/VSProjectmanager_GUI/releases/download/v1.0.0/VSProjectManager_GUI_v1.0.0_osx-arm64.tar.gz)  
+Linux: [Download](https://github.com/SaraKale/VSProjectmanager_GUI/releases/download/v1.0.0/VSProjectManager_GUI_v1.0.0_linux-arm64.tar.gz)
+
 For Windows systems, please select `VSProjectManager_GUI_v1.0.0_win-x64.zip`.  
 For macOS systems, please select `VSProjectManager_GUI_v1.0.0_osx-x64.tar.gz` or `VSProjectManager_GUI_v1.0.0_osx-arm64.tar.gz`.  
 For Linux systems, please select `VSProjectManager_GUI_v1.0.0_linux-arm64.tar.gz`.
 
 ## Runtime Environment
 
-Requires .NET 6.0 Runtime Environment to be installed. Please download it here: https://dotnet.microsoft.com/download/dotnet/6.0
+Requires .NET 6.0 Runtime Environment to be installed. Please download it here: https://dotnet.microsoft.com/download/dotnet/6.0  
 Select "Desktop Runtime" instead of "SDK" and install the version corresponding to your system.
 
 Supported System Versions:  
@@ -52,9 +56,9 @@ Linux: LTS versions of mainstream distributions (e.g., Ubuntu 18.04 LTS, Debian 
 
 ## Build
 
-My Development Environment:
-System: Windows 10
-Environment: [Visual Studio 2022](https://visualstudio.microsoft.com/)
+My Development Environment:  
+System: Windows 10  
+Environment: [Visual Studio 2022](https://visualstudio.microsoft.com/)  
 Framework: .NET 6.0
 
 Required Nuget Packages:
