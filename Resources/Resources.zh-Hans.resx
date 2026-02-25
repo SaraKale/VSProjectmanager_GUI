@@ -155,7 +155,7 @@
     <value>清空全部</value>
   </data>
   <data name="Msg_Noconfigfileselected" xml:space="preserve">
-    <value>没有选择配置文件路径。</value>
+    <value>没有选择配置文件路径</value>
   </data>
   <data name="Msg_listempty" xml:space="preserve">
     <value>列表为空，请添加文件。</value>
@@ -222,5 +222,29 @@
   </data>
   <data name="Menu_ThemeDark" xml:space="preserve">
     <value>夜间模式</value>
+  </data>
+  <data name="Menu_Export_title" xml:space="preserve">
+    <value>导出</value>
+  </data>
+  <data name="Menu_Export_txt" xml:space="preserve">
+    <value>导出TXT列表</value>
+  </data>
+  <data name="Menu_Export_Backup" xml:space="preserve">
+    <value>备份</value>
+  </data>
+  <data name="Title_ExportTXTlIST_Filesave" xml:space="preserve">
+    <value>导出TXT列表</value>
+  </data>
+  <data name="Msg_ExportSuccess" xml:space="preserve">
+    <value>导出成功！文件导出在：</value>
+  </data>
+  <data name="Msg_ExportFailed" xml:space="preserve">
+    <value>导出失败：</value>
+  </data>
+  <data name="Msg_BackupSuccess" xml:space="preserve">
+    <value>备份成功！文件保存在：</value>
+  </data>
+  <data name="Msg_BackupFailed" xml:space="preserve">
+    <value>备份失败：</value>
   </data>
 </root>

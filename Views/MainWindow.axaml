@@ -27,13 +27,17 @@
             <MenuItem Header="{x:Static res:Resources.Lang_Simplified}"  Click="Simplified_Click"/> <!-- 简体中文 -->
             <MenuItem Header="{x:Static res:Resources.Lang_Traditional}" Click="Traditional_Click"/> <!-- 繁体中文 -->
           </MenuItem>
-          <MenuItem Header="{x:Static res:Resources.Menu_About}"> <!-- 关于 -->
-            <MenuItem Header="{x:Static res:Resources.Menu_ExtensionLink}" Click="ExpansionLinkClick"/> <!-- 扩展链接 -->
-            <MenuItem Header="{x:Static res:Resources.Menu_About}" Click="AboutMenuClick"/> <!-- 关于 -->
+          <MenuItem Header="{x:Static res:Resources.Menu_Export_title}"> <!-- 导出 -->
+            <MenuItem Header="{x:Static res:Resources.Menu_Export_txt}" Click="MENUExportTXTlIST"/> <!-- 导出TXT列表 -->
+            <MenuItem Header="{x:Static res:Resources.Menu_Export_Backup}" Click="MENUBackup"/> <!-- 备份 -->
           </MenuItem>
            <MenuItem Header="{x:Static res:Resources.Menu_Theme}"> <!-- 主题 -->
             <MenuItem Header="{x:Static res:Resources.Menu_ThemeLight}" Click="ThemeLightClick"/> <!-- 日间模式 -->
             <MenuItem Header="{x:Static res:Resources.Menu_ThemeDark}" Click="ThemeDarkClick"/> <!-- 夜间模式 -->
+          </MenuItem>
+           <MenuItem Header="{x:Static res:Resources.Menu_About}"> <!-- 关于 -->
+            <MenuItem Header="{x:Static res:Resources.Menu_ExtensionLink}" Click="ExpansionLinkClick"/> <!-- 扩展链接 -->
+            <MenuItem Header="{x:Static res:Resources.Menu_About}" Click="AboutMenuClick"/> <!-- 关于 -->
           </MenuItem>
         </Menu>
 

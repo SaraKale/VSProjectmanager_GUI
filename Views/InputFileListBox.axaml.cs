@@ -51,7 +51,7 @@ namespace VSProjectManager_GUI
             // 检查输入内容是否为空
             if (string.IsNullOrWhiteSpace(BatchFileListBox.Text))
             {
-                await ShowMessage(Res.Msg_NoInputContent);
+                await ShowMessage(Res.Msg_NoInputContent); // 提示没有输入内容
                 return;
             }
 
@@ -72,15 +72,15 @@ namespace VSProjectManager_GUI
             this.Close();
         }
 
-        // 消息框
+        // 消息框布局
         private async System.Threading.Tasks.Task ShowMessage(string msg)
         {
             var dialog = new Window
             {
-                Width = 350,
-                Height = 150,
-                WindowStartupLocation = WindowStartupLocation.CenterOwner,
-                CanResize = false,
+                Width = 350, // 宽度
+                Height = 150, // 高度
+                WindowStartupLocation = WindowStartupLocation.CenterOwner, // 窗口启动位置
+                CanResize = false, // 禁止调整大小
                 // Title = "提示"
             };
 
@@ -89,7 +89,11 @@ namespace VSProjectManager_GUI
                 Text = msg,
                 VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center,
                 HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
-                TextWrapping = Avalonia.Media.TextWrapping.Wrap
+                TextWrapping = Avalonia.Media.TextWrapping.Wrap,
+                Margin = new Avalonia.Thickness(20, 10, 10, 20), // 外边距：左右20，上下10
+                //Padding = new Avalonia.Thickness(10), // 内边距
+                LineHeight = 20, // 行高
+                TextAlignment = Avalonia.Media.TextAlignment.Center // 文字居中对齐
             };
 
             await dialog.ShowDialog(this);

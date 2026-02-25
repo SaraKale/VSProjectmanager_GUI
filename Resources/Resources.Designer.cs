@@ -241,6 +241,33 @@ namespace VSProjectManager_GUI.Resources {
         }
         
         /// <summary>
+        ///   查找类似 Backup 的本地化字符串。
+        /// </summary>
+        public static string Menu_Export_Backup {
+            get {
+                return ResourceManager.GetString("Menu_Export_Backup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Export 的本地化字符串。
+        /// </summary>
+        public static string Menu_Export_title {
+            get {
+                return ResourceManager.GetString("Menu_Export_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Export TXT list 的本地化字符串。
+        /// </summary>
+        public static string Menu_Export_txt {
+            get {
+                return ResourceManager.GetString("Menu_Export_txt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Extension Link 的本地化字符串。
         /// </summary>
         public static string Menu_ExtensionLink {
@@ -282,6 +309,42 @@ namespace VSProjectManager_GUI.Resources {
         public static string Menu_ThemeLight {
             get {
                 return ResourceManager.GetString("Menu_ThemeLight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Backup failure: 的本地化字符串。
+        /// </summary>
+        public static string Msg_BackupFailed {
+            get {
+                return ResourceManager.GetString("Msg_BackupFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Backup successful! File saved in: 的本地化字符串。
+        /// </summary>
+        public static string Msg_BackupSuccess {
+            get {
+                return ResourceManager.GetString("Msg_BackupSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Export failure: 的本地化字符串。
+        /// </summary>
+        public static string Msg_ExportFailed {
+            get {
+                return ResourceManager.GetString("Msg_ExportFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Export success! The file is exported in: 的本地化字符串。
+        /// </summary>
+        public static string Msg_ExportSuccess {
+            get {
+                return ResourceManager.GetString("Msg_ExportSuccess", resourceCulture);
             }
         }
         
@@ -417,6 +480,15 @@ namespace VSProjectManager_GUI.Resources {
         public static string Title_ChooseSaveJSONfile {
             get {
                 return ResourceManager.GetString("Title_ChooseSaveJSONfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Export TXT list 的本地化字符串。
+        /// </summary>
+        public static string Title_ExportTXTlIST_Filesave {
+            get {
+                return ResourceManager.GetString("Title_ExportTXTlIST_Filesave", resourceCulture);
             }
         }
         

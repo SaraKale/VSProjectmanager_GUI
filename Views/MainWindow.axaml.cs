@@ -83,7 +83,6 @@ namespace VSProjectManager_GUI.Views
         {
             var files = await StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
             {
-                // Title = "选择 projects.json 文件",
                 Title = Res.Title_Selectprojectsfile, // 选择 projects.json 文件
                 AllowMultiple = false,
                 FileTypeFilter = new[]
@@ -362,10 +361,10 @@ namespace VSProjectManager_GUI.Views
         {
             var dialog = new Window
             {
-                Width = 350,
-                Height = 150,
-                WindowStartupLocation = WindowStartupLocation.CenterOwner,
-                CanResize = false,
+                Width = 350, // 宽度
+                Height = 150, // 高度
+                WindowStartupLocation = WindowStartupLocation.CenterOwner, // 窗口启动位置
+                CanResize = false, // 禁止调整大小
                 // Title = "提示"
             };
 
@@ -374,7 +373,11 @@ namespace VSProjectManager_GUI.Views
                 Text = msg,
                 VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center,
                 HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
-                TextWrapping = Avalonia.Media.TextWrapping.Wrap
+                TextWrapping = Avalonia.Media.TextWrapping.Wrap,
+                Margin = new Avalonia.Thickness(20, 10, 10, 20), // 外边距：左右20，上下10
+                //Padding = new Avalonia.Thickness(10), // 内边距
+                LineHeight = 22, // 行高
+                TextAlignment = Avalonia.Media.TextAlignment.Center // 文字居中对齐
             };
 
             await dialog.ShowDialog(this);
@@ -524,6 +527,126 @@ namespace VSProjectManager_GUI.Views
         private void ThemeDarkClick(object? sender, RoutedEventArgs e)
         {
             SetTheme("Dark");
+        }
+
+        // 导出-导出TXT列表
+        private async void MENUExportTXTlIST(object? sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(OpenFilePathText.Text) || !File.Exists(OpenFilePathText.Text))
+            {
+                await ShowMessage(Res.Msg_SelectvalidJSONfile); // 请先选择有效的 JSON 文件。
+                return;
+            }
+
+            try
+            {
+                // 读取 JSON 文件内容
+                string json = File.ReadAllText(OpenFilePathText.Text);
+                var projects = JsonSerializer.Deserialize<List<ProjectItem>>(json) ?? new List<ProjectItem>();
+
+                // 收集所有标签和对应的路径
+                Dictionary<string, List<string>> tagFiles = new Dictionary<string, List<string>>();
+
+                foreach (var project in projects)
+                {
+                    if (project.tags != null && project.tags.Count > 0 && !string.IsNullOrWhiteSpace(project.rootPath))
+                    {
+                        foreach (var tag in project.tags)
+                        {
+                            if (!string.IsNullOrWhiteSpace(tag))
+                            {
+                                if (!tagFiles.ContainsKey(tag))
+                                {
+                                    tagFiles[tag] = new List<string>();
+                                }
+                                if (!tagFiles[tag].Contains(project.rootPath))
+                                {
+                                    tagFiles[tag].Add(project.rootPath);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // 生成 TXT 内容
+                StringBuilder sb = new StringBuilder();
+                foreach (var tag in tagFiles.Keys)
+                {
+                    sb.AppendLine($"tags: {tag}");
+                    foreach (var file in tagFiles[tag])
+                    {
+                        sb.AppendLine(file);
+                    }
+                    sb.AppendLine();
+                }
+
+                // 弹出保存对话框
+                var saveFile = await StorageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
+                {
+                    Title = Res.Title_ExportTXTlIST_Filesave, // 导出 TXT 列表
+                    SuggestedFileName = "projects_list.txt",
+                    FileTypeChoices = new[]
+                    {
+                        new FilePickerFileType("Text File")
+                        {
+                            Patterns = new[] { "*.txt" }
+                        }
+                    }
+                });
+
+                if (saveFile != null)
+                {
+                    // 保存文件
+                    File.WriteAllText(saveFile.Path.LocalPath, sb.ToString(), Encoding.UTF8);
+                    await ShowMessage($"{Res.Msg_ExportSuccess} {saveFile.Path.LocalPath}"); // 导出成功！文件导出在：
+                }
+            }
+            catch (Exception ex)
+            {
+                await ShowMessage($"{Res.Msg_ExportFailed}: {ex.Message}"); // 导出失败: {ex.Message}
+            }
+        }
+
+        // 导出-备份
+        private async void MENUBackup(object? sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(OpenFilePathText.Text) || !File.Exists(OpenFilePathText.Text))
+            {
+                await ShowMessage(Res.Msg_SelectvalidJSONfile); // 请先选择有效的 JSON 文件。
+                return;
+            }
+
+            try
+            {
+                // 创建 Backup 文件夹
+                string backupDir = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Backup");
+                if (!Directory.Exists(backupDir))
+                {
+                    Directory.CreateDirectory(backupDir);
+                }
+
+                // 生成备份文件名
+                string dateStr = DateTime.Now.ToString("yyyyMMdd");
+                int index = 1;
+                string backupFileName;
+                do
+                {
+                    backupFileName = $"projects_{dateStr}_{index:000}.json";
+                    index++;
+                } while (File.Exists(System.IO.Path.Combine(backupDir, backupFileName)));
+
+                // 复制文件
+                string backupPath = System.IO.Path.Combine(backupDir, backupFileName);
+                File.Copy(OpenFilePathText.Text, backupPath, true);
+
+                // 显示成功消息
+                string fullBackupPath = System.IO.Path.Combine(backupDir, backupFileName);
+                await ShowMessage($"{Res.Msg_BackupSuccess} {fullBackupPath}"); // 备份成功！文件已保存到：
+            }
+            catch (Exception ex)
+            {
+                await ShowMessage($"{Res.Msg_BackupFailed}: {ex.Message}"); // 备份失败: {ex.Message}
+            }
         }
 
         // ========== END =============

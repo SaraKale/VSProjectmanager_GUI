@@ -35,6 +35,7 @@ Project Manager扩展安装：https://marketplace.visualstudio.com/items?itemNam
 | :------: | :-----------------------------------------------------------------: |
 |  Github  | [releases](https://github.com/SaraKale/VSProjectmanager_GUI/releases) |
 |  Gitee   | [releases](https://gitee.com/sarakale/VSProjectmanager_GUI/releases)  |
+|  lanzouu   | [Download](https://wwavg.lanzouu.com/b0rayryud)   密码:bskw |
 
 Windows: [Download](https://github.com/SaraKale/VSProjectmanager_GUI/releases/download/v1.0.0/VSProjectManager_GUI_v1.0.0_win-x64.zip)  
 Mac: [osx-x64](https://github.com/SaraKale/VSProjectmanager_GUI/releases/download/v1.0.0/VSProjectManager_GUI_v1.0.0_osx-x64.tar.gz) or [osx-arm64](https://github.com/SaraKale/VSProjectmanager_GUI/releases/download/v1.0.0/VSProjectManager_GUI_v1.0.0_osx-arm64.tar.gz)  

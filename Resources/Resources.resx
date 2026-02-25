@@ -224,4 +224,28 @@
   <data name="Menu_ThemeDark" xml:space="preserve">
     <value>Dark</value>
   </data>
+  <data name="Menu_Export_title" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Menu_Export_txt" xml:space="preserve">
+    <value>Export TXT list</value>
+  </data>
+  <data name="Menu_Export_Backup" xml:space="preserve">
+    <value>Backup</value>
+  </data>
+  <data name="Title_ExportTXTlIST_Filesave" xml:space="preserve">
+    <value>Export TXT list</value>
+  </data>
+  <data name="Msg_ExportSuccess" xml:space="preserve">
+    <value>Export success! The file is exported in:</value>
+  </data>
+  <data name="Msg_ExportFailed" xml:space="preserve">
+    <value>Export failure:</value>
+  </data>
+  <data name="Msg_BackupSuccess" xml:space="preserve">
+    <value>Backup successful! File saved in:</value>
+  </data>
+  <data name="Msg_BackupFailed" xml:space="preserve">
+    <value>Backup failure:</value>
+  </data>
 </root>
