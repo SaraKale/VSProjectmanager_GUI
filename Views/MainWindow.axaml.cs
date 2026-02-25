@@ -333,10 +333,13 @@ namespace VSProjectManager_GUI.Views
                 addedCount++;
             }
 
+            // JSON 序列化选项
             var options = new JsonSerializerOptions
             {
-                WriteIndented = true,
-                Encoder = JavaScriptEncoder.Create(UnicodeRanges.All)
+                WriteIndented = true, // 格式化输出
+                Encoder = JavaScriptEncoder.Create(UnicodeRanges.All), // 支持所有 Unicode 字符
+                DefaultIgnoreCondition = JsonIgnoreCondition.Never, // 强制序列化所有属性，包括null值和默认值
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase // 确保属性名使用小驼峰命名（与您的期望格式一致）
             };
 
             File.WriteAllText(outputPath,
@@ -652,12 +655,13 @@ namespace VSProjectManager_GUI.Views
         // ========== END =============
     }
 
+    // JSON值
     public class ProjectItem
     {
-        public string name { get; set; }
-        public string rootPath { get; set; }
-        public List<string> paths { get; set; }
-        public List<string> tags { get; set; }
-        public bool enabled { get; set; }
+        public string name { get; set; } = string.Empty;
+        public string rootPath { get; set; } = string.Empty;
+        public List<string> paths { get; set; } = new List<string>();
+        public List<string> tags { get; set; } = new List<string>();
+        public bool enabled { get; set; } = true;
     }
 }

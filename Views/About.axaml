@@ -19,7 +19,7 @@
        <!-- <TextBlock Margin="0" FontSize="14">Github</TextBlock> -->
 
         </WrapPanel>
-        <TextBlock Margin="0" FontSize="14">version:1.0.1</TextBlock> 
+        <TextBlock Margin="0" FontSize="14">version:1.0.2</TextBlock> 
         <TextBlock Margin="0" FontSize="14">by:SaraKale</TextBlock> 
     </StackPanel>
 

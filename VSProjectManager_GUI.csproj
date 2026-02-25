@@ -9,8 +9,8 @@
     <Title>VSProjectManager_GUI</Title>
     <Authors>SaraKale</Authors>
     <PackageIcon>project-manager-Icons.png</PackageIcon>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <FileVersion>1.0.1</FileVersion>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <FileVersion>1.0.2</FileVersion>
     <AssemblyName>VSProjectManager_GUI</AssemblyName>
     <ApplicationIcon>Assets\project-manager-Icons.ico</ApplicationIcon>
 	<!-- <SelfContained>true</SelfContained> 包含运行时 -->
